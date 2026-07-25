@@ -16,16 +16,22 @@
 <body>
   <main>
     <h1>GLP Me Privacy Policy</h1>
-    <p><strong>Effective date:</strong> July 21, 2026</p>
+    <p><strong>Effective date:</strong> July 24, 2026</p>
     <p>GLP Me ("GLP Me," "we," "us," or "our") is a personal wellness tracker for medication and pill routines, doses, symptoms, nutrition, hydration, weight, activity, and progress. This policy explains how the app handles information.</p>
     <p>GLP Me is not a medical device and does not provide medical advice, diagnosis, treatment, medication dosing, medication adjustment, or titration recommendations.</p>
 
     <h2>App Data And Private iCloud Sync</h2>
-    <p>Your medication or pill routines, dose history, injection sites, symptom check-ins, weight history, nutrition and hydration logs, imported Health values, progress photos, notes, preferences, and reminders are stored by the app. GLP Me does not require an account and does not upload this information to a GLP Me-operated server.</p>
+    <p>Your medication or pill routines, dose history, injection sites, symptom check-ins, weight history, nutrition and hydration logs, imported Health values, progress photos, notes, preferences, and reminders are stored by the app. GLP Me does not require a login. This information is not uploaded to a GLP Me-operated server unless you explicitly choose to ask G as described below.</p>
     <p>When iCloud is available, Apple may privately synchronize app data through your personal iCloud account so it is available on your Apple devices. This data is handled under your iCloud account and Apple's terms and privacy practices. GLP Me's operator cannot browse your private iCloud database. You can manage iCloud in iOS Settings.</p>
 
     <h2>Apple Health</h2>
-    <p>If you choose to connect Apple Health, GLP Me requests read-only access only to the categories needed for features you select: body weight, steps, active energy, workouts, dietary calories, dietary protein, and dietary water. Apple Health access occurs only after you grant permission. Imported values are stored with your private app data and are not sent to a GLP Me-operated server. You can change Apple Health permissions in iOS Settings.</p>
+    <p>If you choose to connect Apple Health, GLP Me requests read-only access only to the categories needed for features you select: body weight, steps, active energy, workouts, dietary calories, dietary protein, and dietary water. Apple Health access occurs only after you grant permission. Imported values are stored with your private app data. A limited summary may be included in a G request only after you separately and explicitly allow G data sharing. You can change Apple Health permissions in iOS Settings.</p>
+
+    <h2>G AI Companion</h2>
+    <p>G is an optional AI companion available in GLP Me Plus. Before the first G request, the app asks for explicit permission to send the information needed to answer your question. Depending on your saved entries and question, that information may include limited summaries of your medication or dose history, check-ins, weight, nutrition, hydration, symptoms, and activity, along with your question and recent messages in the active conversation.</p>
+    <p>G requests are sent securely to GLP Me's backend service hosted by Supabase and then to Google's Gemini API to generate a response. Supabase and Google process this information as service providers under their applicable security, privacy, and data-processing terms. GLP Me does not sell this information, use it for advertising, or use it to build an advertising profile.</p>
+    <p>The GLP Me backend does not intentionally save the question, evidence summary, conversation, or generated answer in an app database. It keeps an anonymous service identifier and daily request totals to secure the service and enforce usage limits. Saved G conversation history remains on your device with device file protection; temporary chats are not saved.</p>
+    <p>You can turn off G data sharing in Settings &gt; Privacy and data. Doing so deletes locally saved G conversations and asks the service to delete the anonymous G service account and its linked per-user usage records. Information already processed by service providers may remain for any limited period required by their security, abuse-prevention, or legal obligations.</p>
 
     <h2>Voice Food Input</h2>
     <p>If you choose voice food input, GLP Me requests microphone and speech-recognition permission and requires Apple's on-device speech recognition. GLP Me uses the resulting transcript as a food-search term. GLP Me does not save the audio recording or send it to a GLP Me-operated server.</p>
@@ -40,12 +46,13 @@
     <p>GLP Me does not include third-party advertising or behavioral analytics SDKs. We do not sell personal information, use health information for advertising, or track you across apps and websites owned by other companies.</p>
 
     <h2>Retention And Deletion</h2>
-    <p>App information remains until you delete it in GLP Me or remove it through your device and iCloud controls. Deletions made in GLP Me are synchronized to the private iCloud store when sync is available. Open Food Facts may retain request information under its operational and privacy practices.</p>
+    <p>App information remains until you delete it in GLP Me or remove it through your device and iCloud controls. Deletions made in GLP Me are synchronized to the private iCloud store when sync is available. Open Food Facts, Supabase, and Google may retain limited request or operational information under their applicable privacy, security, and abuse-prevention practices.</p>
 
     <h2>Your Choices</h2>
     <ul>
       <li>You can use GLP Me without connecting Apple Health.</li>
       <li>You can enter foods manually instead of using online search or barcode lookup.</li>
+      <li>You can use every core tracking feature without G and can turn off G data sharing at any time.</li>
       <li>You can manage Health, microphone, speech recognition, camera, photo, notification, and iCloud permissions in iOS Settings.</li>
       <li>You can remove individual entries or use Delete All Data in the app. You can also manage the app's iCloud data through Apple's system controls.</li>
     </ul>
