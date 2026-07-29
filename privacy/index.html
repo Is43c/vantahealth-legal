@@ -35,7 +35,7 @@
 <body>
   <main>
     <h1>Metryx Privacy Policy</h1>
-    <p><strong>Effective date:</strong> June 5, 2026</p>
+    <p><strong>Effective date:</strong> July 29, 2026</p>
     <p>Metryx ("Metryx," "we," "us," or "our") provides wellness-focused food logging, hydration, training, sleep, medication-context reminders, and body-composition coaching. This Privacy Policy explains what information we collect, how we use it, and the choices you have.</p>
     <p>Metryx is not a medical device and does not provide medical advice, diagnosis, treatment, medication dosing, medication adjustment, or titration recommendations.</p>
 
@@ -47,8 +47,16 @@
     <p>You may enter or connect information such as age, sex, height, weight, body-fat estimates, food logs, macro and micronutrient estimates, hydration logs, workout logs, sleep data, step data, GLP-1/TRT context, reminder schedules, appetite, and digestive-comfort notes.</p>
     <p>Apple Health data is read only after you grant permission. You can manage Apple Health permissions in iOS Settings.</p>
 
+    <h3>Biology Imports And Clinical Records</h3>
+    <p>If the Biology feature is enabled, you may choose to import a lab report, medical-record document, supported genetics export, or Apple Health clinical record. Processing is designed to occur locally. The source document, raw clinical-record payload, and raw DNA rows are discarded after parsing. You review, edit, and select extracted fields before confirmed structured values are stored. Confirmed Biology data is excluded from generic Supabase cloud sync by default.</p>
+    <p>Genetics summaries are limited to educational tendencies and are not used to diagnose disease, claim a deficiency, or prescribe a diet or supplement.</p>
+
+    <h3>M</h3>
+    <p>If M is enabled, saved conversations are stored in authenticated Supabase conversation and message tables until you delete them or your account. A temporary conversation is not written to those Metryx tables, but the configured model provider may have its own request-retention terms.</p>
+    <p>M receives only an allowlisted current-data snapshot needed for the request. Confirmed lab summaries are included only when you separately enable Labs &rarr; M and open M from Biology. M does not receive raw import files, raw clinical records, raw DNA, medical-record items, genetic summaries, medications, supplements, or blood pressure in the first Biology release.</p>
+
     <h3>Food Search And Optional Integrations</h3>
-    <p>When configured, food searches may be sent to food-data providers such as Nutritionix, USDA FoodData Central, or Open Food Facts to return nutrition results. Optional photo or body-analysis endpoints are only used if configured and enabled.</p>
+    <p>When configured, food searches may be sent to food-data providers such as USDA FoodData Central, FatSecret, or Open Food Facts to return nutrition results. Meal photos selected for AI food scanning are sent only when that feature is configured, enabled, and used.</p>
 
     <h3>Local Diagnostics</h3>
     <p>Metryx stores limited diagnostics on device, such as local food-search and logging funnel events, to help debug the beta experience. We do not currently use third-party analytics SDKs for behavioral tracking.</p>
@@ -60,6 +68,8 @@
     <p>We use information to:</p>
     <ul>
       <li>Provide food logging, nutrition targets, hydration targets, training and sleep context, medication reminders, and wellness coaching.</li>
+      <li>Parse and let you review optional Biology imports on your device.</li>
+      <li>Answer optional M questions using only the data categories described above and enabled for that request.</li>
       <li>Sync your Metryx state across devices when you sign in.</li>
       <li>Grant, restore, and manage Premium access for active trials and subscriptions.</li>
       <li>Export or delete your data when requested.</li>
@@ -69,18 +79,21 @@
 
     <h2>Cloud Sync</h2>
     <p>Signed-out use is local to your device. If you sign in, your Metryx app state is synced to Supabase in a per-user row protected by Supabase Row Level Security. Supabase acts as a service provider/processor for authentication, database storage, and secure transport.</p>
+    <p>Confirmed Biology labs, medical-record fields, and genetics summaries are excluded from that generic cloud-sync row by default. Device permission flags, active workout and rest-timer state, device-local photo references, local diagnostics, demo fixtures, and the client Premium cache are also excluded. Saved M conversations use separate authenticated tables.</p>
 
     <h2>Data Retention And Deletion</h2>
     <p>Local data remains on your device until you delete it, uninstall the app, or clear it from Settings.</p>
     <p>Cloud sync data remains until you delete your account or we no longer need it to provide the service. In the app, go to More -&gt; Account &amp; Sync or More -&gt; Privacy to delete your account and associated cloud sync row. Deletion also clears local Metryx data on that device.</p>
+    <p>Biology includes deletion by category and deletion of all Biology data. Its JSON export contains confirmed structured values, not raw documents or raw DNA. Saved M conversations can be deleted from M history and are also covered by account deletion. Provider-side retention and deletion follow the configured provider's disclosed contract.</p>
 
     <h2>Your Choices</h2>
     <p>You can:</p>
     <ul>
       <li>Use Metryx signed out.</li>
       <li>Export local Metryx data as JSON from More -&gt; Privacy.</li>
-      <li>Clear local food logs or all local Metryx data from More -&gt; Privacy.</li>
+      <li>Clear local food logs, Biology categories, or all local Metryx data from More -&gt; Privacy and Biology.</li>
       <li>Delete your account from More -&gt; Account &amp; Sync or More -&gt; Privacy.</li>
+      <li>Revoke Labs &rarr; M sharing without deleting your confirmed local lab values.</li>
       <li>Manage Apple Health, camera, and photo permissions in iOS Settings.</li>
     </ul>
 
@@ -94,7 +107,7 @@
     <p>We may update this Privacy Policy as the app changes. The effective date above will show the latest version.</p>
 
     <h2>Contact</h2>
-    <p>Contact: <a href="mailto:isaacswedberg@gmail.com">isaacswedberg@gmail.com</a></p>
+    <p>Contact: <a href="mailto:metryxhealth@gmail.com">metryxhealth@gmail.com</a></p>
   </main>
 </body>
 </html>
